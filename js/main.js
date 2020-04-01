@@ -54,6 +54,7 @@ function calculate() {
     pc.silog10 = pfv.totalsilo - pfv.g8;
     pc.totaldesp = pfv.totalsilo + pfv.wwg10 + pfv.roadg10;
     pc.netdesp = pfv.totalsilo + pfv.wwg10 + pfv.roadg10 - pfv.rwwg10 - pfv.rchpg10;
+    pc.cls = pfv.g8 + pfv.g10sd + pfv.g10sm + pfv.rwwg10 + pfv.rchpg10 - pfv.totalsilo - pfv.wwg10 - pfv.roadg10;
 
 
 
@@ -86,6 +87,7 @@ function displayCalculated() {
     document.querySelector('#silog10').innerText = pc.silog10;
     document.querySelector('#totaldesp').innerText = pc.totaldesp;
     document.querySelector('#netdesp').innerText = pc.netdesp;
+    document.querySelector('#cls').innerText = pc.cls;
 
 
     document.querySelector('#dlah').innerText = hc.dlah;
